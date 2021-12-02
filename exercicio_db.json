@@ -1,0 +1,19 @@
+{
+    "cliente": {
+        "nome": "",
+        "cpf": "number",
+        "numeroconta": "number",
+        "Telefone": "number"
+    },
+    "banco": {
+        "agencia": {
+            "number": "number",
+            "nome": "strinhg"
+        },
+        "conta": {
+            "saldo": "number",
+            "data": "string",
+            "entradaousaida": "boolean"
+        }
+    }
+}
