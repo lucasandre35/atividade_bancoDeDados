@@ -1,11 +1,11 @@
 const express = require("express")
-const bodyParser = require("body-Parser")
+const bodyParser = require("body-parser")
 const mongoose = require("mongoose")
 
 const app = express()
 
 
-mongoose.connect("mongoose://localhost:27017/senac", {
+mongoose.connect("mongodb://localhost:27017/senac", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -20,8 +20,8 @@ db.once("open", function () {
     console.log("conexão feita com sucesso.")
 })
 
-const index = require("./routers/index")
-const tarefas = require("./routers/tarefasRoute")
+const index = require("./routes/index")
+const tarefas = require("./routes/tarefasRoute")
 
 
 //configurar body parser
@@ -36,6 +36,7 @@ app.use(function(req, res, next) {
     )
     next()
 })
+
 app.use("/", index)
 app.use("/tarefas", tarefas)
 

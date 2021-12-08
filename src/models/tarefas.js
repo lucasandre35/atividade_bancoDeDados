@@ -14,5 +14,7 @@ const tarefasSchema = new mongoose.Schema({
 
 const tarefas = mongoose.model('tarefas', tarefasSchema);
 
+
+
 // exportar o model para ser ultilizado 
 module.exports = tarefas;

@@ -1,4 +1,4 @@
- const app = require("./src/app");
+ const app = require('./src/app');
  const port = 1337;
 
  app.listen(port, () => {
